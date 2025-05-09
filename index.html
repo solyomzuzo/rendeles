@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendelés</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div id="neptun">
+        <strong>Andó Ákos - D84EJM</strong>
+    </div>
+
+    <h1>WEB-PROGRAMOZÁS I</h1>
+
+    <div id="container">
+        <div id="form-box">
+            <h2>Rendelés:</h2>
+            <form action="php/feldolgoz.php" method="POST" id="orderForm">
+                <table>
+                    <tr><td>Név:</td>
+                        <td><input type="text" name="nev" id="nev" required minlength="8" maxlength="30"></td></tr>
+                    <tr><td>E-mail:</td>
+                        <td><input type="email" name="email" id="email" required></td></tr>
+                    <tr><td>Darab:</td>
+                        <td><input type="number" name="darab" id="darab" required min="1" max="10"></td></tr>
+                    <tr><td>Nap:</td>
+                        <td>
+                            <select name="nap" id="nap" required>
+                                <option value="">Válasszon!</option>
+                                <option value="hetfo">hétfő</option>
+                                <option value="kedd">kedd</option>
+                                <option value="szerda">szerda</option>
+                                <option value="csutortok">csütörtök</option>
+                                <option value="pentek">péntek</option>
+                            </select>
+                        </td></tr>
+                    <tr><td colspan="2"><input type="submit" value="Küldés"></td></tr>
+                </table>
+            </form>
+        </div>
+
+        <div id="image-box">
+            <img src="images/kep.jpg" alt="kep" width="200">
+        </div>
+    </div>
+</body>
+</html>
